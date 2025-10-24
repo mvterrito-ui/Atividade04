@@ -1,6 +1,7 @@
 /* =========================
    Design System
    ========================= */
+
 :root {
   /* Cores */
   --color-primary: #0055a5;
@@ -31,6 +32,7 @@
 /* =========================
    Reset e Base
    ========================= */
+   
 * {
   margin: 0;
   padding: 0;
@@ -86,7 +88,7 @@ nav ul li ul {
   top: 100%;
   left: 0;
   background-color: var(--color-bg);
-  color: var(--color-text); /* ← texto escuro */
+  color: var(--color-text); 
   padding: var(--space-2);
   list-style: none;
 }
@@ -116,7 +118,10 @@ nav ul li:hover ul {
   border: none;
   font-size: var(--font-md);
 }
-
+@media (max-width: 576px) { ... }
+@media (min-width: 768px) and (max-width: 991px) { ... }
+@media (min-width: 992px) and (max-width: 1199px) { ... }
+@media (min-width: 1200px) { ... }
 @media (max-width: 768px) {
   nav ul {
     display: none;
