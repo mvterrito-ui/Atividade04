@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ONG Amigão - Início</title>
-  <link rel="stylesheet" href="css/Styles.css" />
-</head>
+ </head>
+ <link rel="stylesheet" href="CSS/Styles.css" />
 <body>
   <button class="menu-toggle">☰ Menu</button>
 
@@ -25,6 +25,12 @@
     </nav>
   </header>
 
+  <main>
+  <section>
+    <h2>Bem-vindo à ONG Amigão</h2>
+    <p>Use o menu acima para navegar pelos projetos ou se cadastrar como voluntário.</p>
+  </section>
+</main>
   <main>
     <section>
       <h2>Quem Somos</h2>
@@ -51,7 +57,7 @@
     <p>&copy; 2025 ONG Amigão</p>
   </footer>
 
-  <script>
+    <script>
     const toggle = document.querySelector('.menu-toggle');
     const body = document.body;
 
@@ -59,5 +65,7 @@
       body.classList.toggle('menu-open');
     });
   </script>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

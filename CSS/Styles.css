@@ -317,14 +317,29 @@ input:invalid {
 }
 
 img {
-  max-width: 20%;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: var(--space-2);
+  display: block;
+  margin: 0 auto;
 }
 
 .img-projeto {
-  max-width: 400px;
-  width: 100%;
+  max-width: 100px;
+  width: 20%;
   height: auto;
+  border-radius: 8px;
+}
+img {
+  max-width: 10%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }

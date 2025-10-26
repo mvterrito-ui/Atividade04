@@ -2,30 +2,11 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projetos Sociais - ONG Amigão</title>
-  <link rel="stylesheet" href="CSS/Styles.css" />
+  <title>Projetos - ONG Amigão</title>
 </head>
-<body>
-  <button class="menu-toggle">☰ Menu</button>
-
-  <header>
-    <h1>Projetos da ONG Amigão</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a>
-          <ul>
-            <li><a href="#">Adoção</a></li>
-            <li><a href="#">Eventos</a></li>
-          </ul>
-        </li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
+  <link rel="stylesheet" href="CSS/Styles.css" />
+    <body>
+    <main>
     <section>
       <h2>Projetos em andamento</h2>
 
@@ -40,7 +21,7 @@
       <div class="card">
         <h3>Projeto Gatinhos do Bem</h3>
         <p>Cuidados veterinários e adoção responsável de gatos resgatados.</p>
-        <img src="imagens/gatinhosdobem.jpg" alt="Gato sendo alimentado por voluntário" />
+        <img src="imagens/gatinhosdobem.jpg" alt="Gato sendo alimentado por voluntário" class="img-projeto" />
         <span class="badge">Saúde Animal</span>
         <span class="tag">Adoção</span>
       </div>
@@ -63,18 +44,6 @@
       <img src="imagens/doacoes.jpg" alt="Doações sendo organizadas por voluntários" />
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 ONG Amigão</p>
-  </footer>
-
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const body = document.body;
-
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('menu-open');
-    });
-  </script>
+   <script type="module" src="js/main.js"></script>
 </body>
 </html>
