@@ -55,10 +55,14 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--space-3);
+  text-align: center;
+
 }
 
 header, footer, section {
   grid-column: span 12;
+  text-align: center;
+
 }
 
 /* =========================
@@ -106,18 +110,31 @@ nav ul li ul li a:hover {
 }
 
 nav ul li:hover ul {
-  display: block;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding-bottom: var(--space-2);
+  text-align: center;
 }
 
-/* Menu */
 .menu-toggle {
-  display: none;
   background-color: var(--color-primary);
-  color: rgb(250, 250, 250);
-  padding: var(--space-2);
+  color: white;
   border: none;
+  padding: var(--space-2);
   font-size: var(--font-md);
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: var(--space-2);
+  margin-left: auto;
+  margin-right: auto;
+  display: none; /* aparece só em telas pequenas */
+
 }
+}
+
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -131,7 +148,7 @@ nav ul li:hover ul {
     padding: 0.5em;
   }
 }
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
   .menu-toggle {
     display: block;
   }
@@ -150,6 +167,9 @@ nav ul li:hover ul {
     display: flex;
   }
 }
+
+  
+
 @media (max-width: 768px) {
   nav li {
     margin: 10px 0;
@@ -161,12 +181,6 @@ nav ul li:hover ul {
   }
 
   .card {
-    text-align: center;
-  }
-}
-@media (max-width: 768px) {
-  nav li {
-    margin: 10px 0;
     text-align: center;
   }
 
@@ -188,7 +202,9 @@ nav ul li:hover ul {
     flex-direction: column;
     align-items: center;
   }
-  @media (min-width: 1025px) {
+}
+
+@media (min-width: 1025px) {
   nav ul {
     justify-content: center;
   }
@@ -198,7 +214,6 @@ nav ul li:hover ul {
     margin: 1em auto;
   }
 }
-}
   .menu-toggle {
     display: block;
     margin-bottom: var(--space-2);
@@ -207,6 +222,7 @@ nav ul li:hover ul {
   .menu-open nav ul {
     display: flex;
   }
+
 
 
 /* =========================
@@ -316,13 +332,6 @@ input:invalid {
   margin: auto;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 .img-projeto {
   max-width: 100px;
   width: 20%;
@@ -342,4 +351,15 @@ img {
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+}
+.erro {
+  border-color: var(--color-error);
+  background-color: #ffe6e6;
+}
+
+.mensagem-erro {
+  color: var(--color-error);
+  font-size: var(--font-xs);
+  margin-top: 4px;
+  display: block;
 }

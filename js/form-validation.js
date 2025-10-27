@@ -7,20 +7,23 @@ export function iniciarValidacao() {
 
     const campos = form.querySelectorAll('input[required], select[required]');
     campos.forEach((campo) => {
-      if (!campo.value.trim()) {
+      const valor = campo.value.trim();
+      const mensagemExistente = campo.parentNode.querySelector('.mensagem-erro');
+
+      if (!valor) {
         campo.classList.add('erro');
         valido = false;
 
-        if (!campo.nextElementSibling || !campo.nextElementSibling.classList.contains('mensagem-erro')) {
+        if (!mensagemExistente) {
           const msg = document.createElement('span');
           msg.className = 'mensagem-erro';
           msg.textContent = 'Este campo é obrigatório.';
-          campo.parentNode.insertBefore(msg, campo.nextSibling);
+          campo.parentNode.appendChild(msg);
         }
       } else {
         campo.classList.remove('erro');
-        if (campo.nextElementSibling && campo.nextElementSibling.classList.contains('mensagem-erro')) {
-          campo.nextElementSibling.remove();
+        if (mensagemExistente) {
+          mensagemExistente.remove();
         }
       }
     });
@@ -31,4 +34,3 @@ export function iniciarValidacao() {
     }
   });
 }
-
