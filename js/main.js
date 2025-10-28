@@ -2,8 +2,6 @@ import { criarCardProjeto } from './templates.js';
 import { salvarDadosFormulario, carregarDadosFormulario } from './storage.js';
 import { iniciarValidacao } from './form-validation.js';
 
-console.log('main.js carregado');
-
 function carregarPagina(pagina) {
   fetch(pagina)
     .then(res => res.text())
@@ -16,7 +14,7 @@ function carregarPagina(pagina) {
       if (novoConteudo && atualMain) {
         atualMain.innerHTML = novoConteudo.innerHTML;
         window.history.pushState({}, '', pagina);
-        inicializarPagina(); // reativa scripts e eventos
+        inicializarPagina(); 
       }
     })
     .catch(err => {
@@ -35,7 +33,6 @@ function inicializarPagina() {
 
   const pathname = window.location.pathname;
 
-  // Validação e salvamento do formulário
   if (pathname.includes('cadastro.html')) {
     iniciarValidacao();
     const form = document.querySelector('form');
@@ -47,7 +44,6 @@ function inicializarPagina() {
     }
   }
 
-  // Renderização dos projetos
   if (pathname.includes('projetos.html')) {
     const container = document.querySelector('#cards-projetos');
     if (container) {
@@ -73,7 +69,6 @@ function inicializarPagina() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Intercepta cliques no menu para navegação SPA
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
@@ -84,5 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  inicializarPagina(); // ativa scripts da página inicial
+  inicializarPagina(); 
 });
+
+const botaoTema = document.getElementById('toggle-tema');
+botaoTema.addEventListener('click', () => {
+  document.body.classList.toggle('modo-escuro');
+});
+

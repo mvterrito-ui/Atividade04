@@ -1,9 +1,6 @@
-/* =========================
-   Design System
-   ========================= */
 
 :root {
-  /* Cores */
+
   --color-primary: #0055a5;
   --color-secondary: #00a5a5;
   --color-accent: #ffcc00;
@@ -13,14 +10,14 @@
   --color-text: #212529;
   --color-muted: #6c757d;
 
-  /* Fontes */
+
   --font-xs: 12px;
   --font-sm: 14px;
   --font-md: 16px;
   --font-lg: 20px;
   --font-xl: 28px;
 
-  /* Espaçamentos */
+
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -29,10 +26,7 @@
   --space-6: 64px;
 }
 
-/* =========================
-   Reset e Base
-   ========================= */
-   
+
 * {
   margin: 0;
   padding: 0;
@@ -48,9 +42,7 @@ body {
   padding: var(--space-3);
 }
 
-/* =========================
-   Layout com Grid
-   ========================= */
+
 main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -65,9 +57,6 @@ header, footer, section {
 
 }
 
-/* =========================
-   Navegação
-   ========================= */
 nav ul {
   display: flex;
   gap: var(--space-2);
@@ -116,7 +105,7 @@ header {
   align-items: center;
   gap: var(--space-2);
   padding-bottom: var(--space-2);
-  text-align: center;
+  text-align: center;}  
 }
 
 .menu-toggle {
@@ -130,9 +119,8 @@ header {
   margin-bottom: var(--space-2);
   margin-left: auto;
   margin-right: auto;
-  display: none; /* aparece só em telas pequenas */
+  display: none; 
 
-}
 }
 
 @media (max-width: 480px) {
@@ -168,7 +156,6 @@ header {
   }
 }
 
-  
 
 @media (max-width: 768px) {
   nav li {
@@ -223,16 +210,12 @@ header {
     display: flex;
   }
 
-
-
-/* =========================
-   Componentes
-   ========================= */
 .card {
+  background-color: rgb(241, 241, 241); 
+  color: var(--color-text); 
   border: 1px solid var(--color-muted);
   padding: var(--space-3);
   border-radius: 8px;
-  background-color: rgb(241, 241, 241);
 }
 
 button {
@@ -253,9 +236,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* =========================
-   Formulários
-   ========================= */
+
 input, select {
   padding: var(--space-2);
   border: 1px solid var(--color-muted);
@@ -278,9 +259,6 @@ input:invalid {
   border-color: var(--color-error);
 }
 
-/* =========================
-   Badges e Tags
-   ========================= */
 .badge {
   background-color: var(--color-accent);
   color: var(--color-text);
@@ -301,9 +279,6 @@ input:invalid {
   margin-right: var(--space-1);
 }
 
-/* =========================
-   Feedback Visual
-   ========================= */
 .alert {
   background-color: var(--color-error);
   color: white;
@@ -362,4 +337,23 @@ img {
   font-size: var(--font-xs);
   margin-top: 4px;
   display: block;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+input:valid {
+  border: 2px solid green;
+}
+body.modo-escuro {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.modo-escuro nav ul {
+  background-color: #1e1e1e;
+}
+
+body.modo-escuro a {
+  color: #90cdf4;
 }
