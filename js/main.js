@@ -83,7 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const botaoTema = document.getElementById('toggle-tema');
-botaoTema.addEventListener('click', () => {
-  document.body.classList.toggle('modo-escuro');
-});
+if (botaoTema) {
+  botaoTema.addEventListener('click', () => {
+    document.body.classList.toggle('modo-escuro');
+  });
+}
 

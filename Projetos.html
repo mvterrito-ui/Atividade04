@@ -2,18 +2,37 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projetos - ONG Amigão</title>
   <link rel="stylesheet" href="CSS/Styles.css" />
-  </head>
-    <body>
-    <main>
+</head>
+<body>
+  <button class="menu-toggle" aria-label="Abrir menu de navegação">☰ Menu</button>
+
+  <header>
+    <h1>ONG Amigão</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Início</a></li>
+        <li><a href="Projetos.html">Projetos</a>
+          <ul>
+            <li><a href="#">Adoção</a></li>
+            <li><a href="#">Eventos</a></li>
+          </ul>
+        </li>
+        <li><a href="Cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <section>
       <h2>Projetos em andamento</h2>
 
       <div class="card">
         <h3>Projeto Patas Felizes</h3>
         <p>Resgate e reabilitação de cães abandonados em áreas urbanas.</p>
-        <img src="imagens/patasfelizes.jpg" alt="Cão resgatado" class="img-projeto" />
+        <img src="Imagens/patasfelizes.jpg" alt="Cão resgatado" class="img-projeto" />
         <span class="badge">Voluntariado</span>
         <span class="tag">Adoção</span>
       </div>
@@ -21,7 +40,7 @@
       <div class="card">
         <h3>Projeto Gatinhos do Bem</h3>
         <p>Cuidados veterinários e adoção responsável de gatos resgatados.</p>
-        <img src="imagens/gatinhosdobem.jpg" alt="Gato sendo alimentado por voluntário" class="img-projeto" />
+        <img src="Imagens/gatinhosdobem.jpg" alt="Gato sendo alimentado por voluntário" class="img-projeto" />
         <span class="badge">Saúde Animal</span>
         <span class="tag">Adoção</span>
       </div>
@@ -29,8 +48,8 @@
 
     <section>
       <h2>Como ser voluntário</h2>
-      <p>Você pode se inscrever para ajudar nos cuidados, transporte, divulgação ou eventos. Basta acessar a página de <a href="cadastro.html">Cadastro</a> e preencher o formulário.</p>
-      <img src="imagens/voluntarios.jpg" alt="Voluntários em ação com animais" />
+      <p>Você pode se inscrever para ajudar nos cuidados, transporte, divulgação ou eventos. Basta acessar a página de <a href="Cadastro.html">Cadastro</a> e preencher o formulário.</p>
+      <img src="Imagens/voluntarios.jpg" alt="Voluntários em ação com animais" />
     </section>
 
     <section>
@@ -41,9 +60,23 @@
         <li>Banco do Brasil - Agência 1234 - Conta 56789-0</li>
         <li>Doe ração, medicamentos ou tempo!</li>
       </ul>
-      <img src="imagens/doacoes.jpg" alt="Doações sendo organizadas por voluntários" />
+      <img src="Imagens/doacoes.jpg" alt="Doações sendo organizadas por voluntários" />
     </section>
   </main>
-   <script type="module" src="js/main.js"></script>
+
+  <footer>
+    <p>&copy; 2025 ONG Amigão</p>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const body = document.body;
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('menu-open');
+    });
+  </script>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
